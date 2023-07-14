@@ -32,7 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, "../front-end/build")));
+app.use(express.static(path.join(__dirname, "./front-end/build")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/query", queryRouter);
