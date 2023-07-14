@@ -1,4 +1,4 @@
-const BaseUrl = "http://localhost:8000";
+const BaseUrl = window.location.origin;
 
 export const config = {
   saveApi: `${BaseUrl}/query/save`,
