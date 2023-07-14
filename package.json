@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build": "echo nothing to build",
+    "build": "echo nothing to build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
