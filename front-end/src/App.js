@@ -11,6 +11,7 @@ import Header from "./components/Header/Header";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import Login from "./components/Login/Login";
 import { useAuth } from "./storage/loginContext";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const { login } = useAuth();
@@ -24,13 +25,15 @@ const App = () => {
           <div>
             <Switch>
               <Route exact path="/" component={withRouter(UserDashboard)} />
-              {!isAuthenticated && <Route exact path="/login" component={Login} />}
+              {!isAuthenticated && (
+                <Route exact path="/login" component={Login} />
+              )}
               <ProtectedRoute
                 path="/admin"
                 component={AdminDashboard}
                 isAuthenticated={isAuthenticated}
               />
-               <Route component={UserDashboard} />
+              <Route component={UserDashboard} />
               {/* <Route exact path="/">
               <UserDashboard />
             </Route>
@@ -38,6 +41,7 @@ const App = () => {
             //   <AdminDashboard />
             // </Route> */}
             </Switch>
+            <Footer />
           </div>
         </React.StrictMode>
       </Router>

@@ -1,0 +1,38 @@
+/* Style the select element */
+select,
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    width: 200px;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+select::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+/* Style the select options */
+select option {
+    background-color: white;
+    color: #333;
+}
+
+/* Style the select on hover */
+select:hover,
+input:hover {
+    border-color: #999;
+}

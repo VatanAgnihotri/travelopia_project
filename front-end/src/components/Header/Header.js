@@ -20,9 +20,12 @@ const navStyles = {
 
 const linkStyles = {
   textDecoration: "none",
-  color: "#333",
-  padding: "5px",
+  color: "white",
+  padding: "10px",
   marginLeft: "10px",
+  backgroundColor: "red",
+  border: "1px solid red",
+  borderRadius: "10px",
 };
 
 const Header = () => {

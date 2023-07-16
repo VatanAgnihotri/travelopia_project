@@ -1,6 +1,7 @@
 var express = require("express");
 const saveQuery = require("../controllers/saveQuery");
 const getList = require("../controllers/getList");
+const { authenticateToken } = require("../utils/loginUtils");
 var router = express.Router();
 
 router.post("/save", async (req, res, next) => {
@@ -25,7 +26,7 @@ router.post("/save", async (req, res, next) => {
   }
 });
 
-router.get("/list", async (req, res, next) => {
+router.get("/list", authenticateToken, async (req, res, next) => {
   try {
     const list = await getList();
     res.status(200).json({ data: [...list] });

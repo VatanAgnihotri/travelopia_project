@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import apiService from "../../api/queryApi";
+import "./Form.css";
 const formStyles = {
   display: "flex",
   flexDirection: "column",
@@ -26,6 +27,7 @@ const inputFieldStyles = {
 };
 
 const buttonActiveStyle = {
+  backgroundColor: "grey",
   width: "100%",
   padding: "8px 12px",
   border: "none",
@@ -34,6 +36,7 @@ const buttonActiveStyle = {
 };
 
 const buttonInActiveStyle = {
+  backgroundColor: "grey",
   width: "100%",
   padding: "8px 12px",
   border: "none",

@@ -10,10 +10,11 @@ const queryRouter = require("./routes/querys");
 const { default: mongoose } = require("mongoose");
 
 const app = express();
-
-const username = encodeURIComponent("test_projects");
-const password = encodeURIComponent("Test@123");
+const env = process.env;
+const username = encodeURIComponent(env["MONGO_USERNAME"]);
+const password = encodeURIComponent(env["MONGO_PASSWORD"]);
 const url = `mongodb+srv://${username}:${password}@cluster0.zxpvlzm.mongodb.net/travelopia?retryWrites=true&w=majority`;
+console.log("DB URL :: ", url);
 mongoose
   .connect(url, {
     useNewUrlParser: true,

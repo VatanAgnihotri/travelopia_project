@@ -32,12 +32,12 @@ const subtitleStyles = {
 };
 
 const buttonStyles = {
+  backgroundColor: "red",
+  border: "1px solid red",
+  borderRadius: "10px",
   padding: "10px 20px",
   fontSize: "20px",
-  backgroundColor: "#007bff",
   color: "#fff",
-  border: "none",
-  borderRadius: "4px",
 };
 
 const UserDashboard = () => {

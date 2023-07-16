@@ -17,6 +17,7 @@ const saveApi = (data, methodType) => {
 const listApi = (methodType) => {
   return axios.request({
     url: listEndpoint,
+    headers: { Authorization: localStorage.getItem("token") },
     method: methodType,
   });
 };

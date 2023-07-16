@@ -27,6 +27,7 @@ const Login = () => {
         "POST"
       );
       console.log("Login Successful! :: ", loginStatus);
+      localStorage.setItem("token", loginStatus.data.token);
       localStorage.setItem("login", true);
       changeLoginStatus();
       setUsername("");
@@ -44,19 +45,23 @@ const Login = () => {
         <div className="form-group">
           <label htmlFor="username">Username </label>
           <input
+            className="form-input"
             type="text"
             id="username"
             value={username}
             onChange={handleUsernameChange}
+            required
           />
         </div>
         <div className="form-group">
           <label htmlFor="password">Password </label>
           <input
+            className="form-input"
             type="password"
             id="password"
             value={password}
             onChange={handlePasswordChange}
+            required
           />
         </div>
         <button type="submit">Login</button>
